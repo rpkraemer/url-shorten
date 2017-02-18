@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+               border: 1px solid black;
+            }
+        </style>
+    </head>
+<body>
+    <h3> URLs encurtadas: </h3>
+    <a href="shorten">Encurtar URL</a>
+    
+    <br/>
+    <br/>
+    
+    <table >
+     <thead>
+        <tr>
+            <th>ID</th>
+            <th>Excluir</th>
+        </tr>
+     </thread>
+     <tbody>
+        {% for url in urls %}
+           <tr>
+              <td>
+                <a href="{{url.0}}">{{url.0}}</a>
+              </td>
+              <td><a href="delete-url/{{url.0}}">Excluir</a></td>
+           </tr>
+        {% endfor %}
+     </tbody>
+    </table>
+</body>
+</html>
